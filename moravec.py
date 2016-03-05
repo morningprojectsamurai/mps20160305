@@ -26,7 +26,6 @@ class MoravecCornerDetector:
 
     def _get_minimum(self, image, start):
         shifts = ((0, 1), (1, 1), (1, 0), (-1, 1))
-        #shifts = ((-1, -1), (-1, 0), (0, -1), (1, 1), (1, 0), (0, 1), (-1, 1), (1, -1))
         min = np.infty
         for shift in shifts:
             e = self._evaluate_error(image, start, shift)
