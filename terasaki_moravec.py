@@ -35,7 +35,7 @@ def getSample1():
     return rand_bit_seq
 
 def getSubDomain(global_domain,pt):
-	return global_domain[pt[0]:pt[0]+3,pt[1]:pt[1]+3]
+    return global_domain[pt[0]:pt[0]+3,pt[1]:pt[1]+3]
 
 def getInspectionDomain(global_domain,inspection_point):
     return getSubDomain(global_domain,inspection_point)
@@ -43,9 +43,8 @@ def getInspectionDomain(global_domain,inspection_point):
 def isDomainValid(glboal_domain,inspection_point,domain_len):
     dom=getInspectionDomain(global_domain,inspection_point)
     for i in dom.shape:
-	    if (i!=domain_len):
-	    	return False
-    
+        if (i!=domain_len):
+            return False
     return True
 
 #evaluation system
@@ -78,7 +77,7 @@ def localMinimum(global_domain,inspection_point,shift_candidates,domain_len):
     if(len(eval_list)!=0):
         return min(eval_list)
     else:
-    	return 0
+        return 0
 
 def cornerCriteriaUsingMoravec(global_domain,inspection_point,domain_len):
     eval_list=[]
@@ -106,7 +105,7 @@ def searchMaximumPoint(global_domain,shift_candidates,domain_len):
 
 #Main 
 if __name__ == '__main__':
-	#testset
+    #testset
     global_domain=generateTestDomain()
     #inspection domain
     domain_len=3 
