@@ -3,11 +3,11 @@
 import numpy as np
 import math
 
-#memo 
-#️これをClassにする際は
-#global_domain
-#domain_len
-#などをclass 内部の関数から自由に参照させたい
+#memo if one would like to package those codes into class
+# this is may be good that variables like
+#"global_domain"
+#"shift_candidates"
+#are refered freely from methods belonging in the class
 
 #Testset Generator
 #generate global domain
